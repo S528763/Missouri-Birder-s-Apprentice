@@ -17,6 +17,7 @@ class BirdViewController: UIViewController {
     @IBOutlet weak var dateLBL: UILabel!
     @IBOutlet weak var sightingsTF: UITextField!
     @IBOutlet weak var updateSighBTN: UIButton!
+    @IBOutlet weak var birdPicIV: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,9 @@ class BirdViewController: UIViewController {
         self.navigationItem.title = bird
         sightingsTF.text = "\(0)"
         dateLBL.text = "\(Calendar.current.component(.year , from: Date()))"
+        
+        birdPicIV.image = UIImage(named: "\(bird!).jpg")
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,6 +40,8 @@ class BirdViewController: UIViewController {
         birdie.updateNumSightings()
         sightingsTF.text = "\(birdie.numOfSightings)"
     }
+    
+    
 
     /*
     // MARK: - Navigation

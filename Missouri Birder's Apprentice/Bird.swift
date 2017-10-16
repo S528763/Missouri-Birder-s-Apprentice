@@ -19,7 +19,7 @@ class Bird: Equatable, CustomStringConvertible {
     var latinName:String!
     var location:CLLocationCoordinate2D!
     var dateFirstSighted:String!
-    var numOfSightings:Int = 0
+    var numOfSightings:Int!
     
     init(name:String, latinName:String, dateFirstSighted:String, numOfSightings:Int, description:String, location:CLLocationCoordinate2D) {
         self.name = name
