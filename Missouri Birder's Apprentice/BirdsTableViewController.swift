@@ -10,7 +10,7 @@ import UIKit
 
 class BirdsTableViewController: UITableViewController {
 
-    var county:County!
+    var county:County!    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,24 +32,31 @@ class BirdsTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return county.birds.count
     }
-
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "bird_cell", for: indexPath)
-
         // Configure the cell...
-        //cell.textLabel?.text = county.birds[indexPath.row]
+        cell.textLabel?.text = county.birds[indexPath.row].name
+        cell.imageView?.image = UIImage(named: "\(county.birds[indexPath.row].name!).jpg")
+        cell.detailTextLabel?.text = county.birds[indexPath.row].latinName
         return cell
     }
     
-
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let birdVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "bird_view_controller") as! BirdViewController
+        
+        birdVC.bird = county.birds[indexPath.row].name
+        self.navigationController?.pushViewController(birdVC, animated: true)
+    }
+    
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

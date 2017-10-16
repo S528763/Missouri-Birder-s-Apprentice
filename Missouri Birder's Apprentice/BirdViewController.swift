@@ -10,10 +10,21 @@ import UIKit
 
 class BirdViewController: UIViewController {
 
+    var bird:String!
+    let birdie = Bird()
+    
+    @IBOutlet weak var locLBL: UILabel!
+    @IBOutlet weak var dateLBL: UILabel!
+    @IBOutlet weak var sightingsTF: UITextField!
+    @IBOutlet weak var updateSighBTN: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.navigationItem.title = bird
+        sightingsTF.text = "\(0)"
+        dateLBL.text = "\(Calendar.current.component(.year , from: Date()))"
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,6 +32,10 @@ class BirdViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func updateSightings(_ sender: Any) {
+        birdie.updateNumSightings()
+        sightingsTF.text = "\(birdie.numOfSightings)"
+    }
 
     /*
     // MARK: - Navigation

@@ -19,7 +19,7 @@ class Bird: Equatable, CustomStringConvertible {
     var latinName:String!
     var location:CLLocationCoordinate2D!
     var dateFirstSighted:String!
-    var numOfSightings:Int!
+    var numOfSightings:Int = 0
     
     init(name:String, latinName:String, dateFirstSighted:String, numOfSightings:Int, description:String, location:CLLocationCoordinate2D) {
         self.name = name
@@ -28,6 +28,10 @@ class Bird: Equatable, CustomStringConvertible {
         self.numOfSightings = numOfSightings
         self.description = description
         self.location = location
+    }
+    
+    convenience init() {
+        self.init(name: "", latinName: "", dateFirstSighted: "", numOfSightings: 0, description: "", location: CLLocationCoordinate2DMake(0.0, 0.0))
     }
     
     func updateNumSightings() {

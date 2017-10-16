@@ -10,7 +10,7 @@ import Foundation
 import CoreLocation
 
 struct State {
-    static var counties:[County] = [County(name: "San Jose", birds: [Bird(name: "Pichuka", latinName: "Pichu", dateFirstSighted: "01-01-2011", numOfSightings: 786, description: "Its a Bird", location: CLLocationCoordinate2D(latitude: 10.46, longitude: 34.56))]),
+    static var counties:[County] = [County(name: "San Jose", birds: [Bird(name: "Pichuka", latinName: "Pichu", dateFirstSighted: "01-01-2011", numOfSightings: 786, description: "Its a Bird", location: CLLocationCoordinate2D(latitude: 10.46, longitude: 34.56)), Bird(name: "Pichuka2", latinName: "Pichu hehe", dateFirstSighted: "01-01-2011", numOfSightings: 786, description: "Its a Bird", location: CLLocationCoordinate2D(latitude: 10.46, longitude: 34.56))]),
         County(name: "San Francisco", birds: [Bird(name: "Pichuka2", latinName: "Pichu2", dateFirstSighted: "01-01-2011", numOfSightings: 786, description: "Its a Bird", location: CLLocationCoordinate2D(latitude: 10.46, longitude: 34.56))])]
     
     // returns # of counties
