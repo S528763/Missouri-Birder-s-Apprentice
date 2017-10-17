@@ -31,7 +31,7 @@ class Bird: Equatable, CustomStringConvertible {
     }
     
     convenience init() {
-        self.init(name: "", latinName: "", dateFirstSighted: "", numOfSightings: 0, description: "", location: CLLocationCoordinate2DMake(0.0, 0.0))
+        self.init(name: "", latinName: "", dateFirstSighted: "", numOfSightings: 0, description: "", location: CLLocationCoordinate2D(latitude: 0.0, longitude: 0.0))
     }
     
     func updateNumSightings() {

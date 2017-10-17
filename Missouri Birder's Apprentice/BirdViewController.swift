@@ -13,6 +13,7 @@ class BirdViewController: UIViewController {
     var bird:String!
     let birdie = Bird()
     
+    
     @IBOutlet weak var locLBL: UILabel!
     @IBOutlet weak var dateLBL: UILabel!
     @IBOutlet weak var sightingsTF: UITextField!
@@ -26,9 +27,14 @@ class BirdViewController: UIViewController {
         self.navigationItem.title = bird
         sightingsTF.text = "\(0)"
         dateLBL.text = "\(Calendar.current.component(.year , from: Date()))"
-        
+        locLBL.text = "\(birdie.location.latitude, birdie.location.longitude)"
         birdPicIV.image = UIImage(named: "\(bird!).jpg")
         
+        let datePicker = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd-MM-yyyy HH:mm:ssss"
+        let result = formatter.string(from: Date())
+        dateLBL.text = result
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,7 +44,7 @@ class BirdViewController: UIViewController {
     
     @IBAction func updateSightings(_ sender: Any) {
         birdie.updateNumSightings()
-        sightingsTF.text = "\(birdie.numOfSightings)"
+        sightingsTF.text = "\(birdie.numOfSightings!)"
     }
     
     
