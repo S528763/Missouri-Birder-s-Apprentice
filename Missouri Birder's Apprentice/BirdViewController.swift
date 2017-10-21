@@ -11,7 +11,7 @@ import UIKit
 class BirdViewController: UIViewController {
 
     var bird:String!
-    let birdie = Bird()
+    var birdie = Bird()
     
     
     @IBOutlet weak var locLBL: UILabel!
@@ -27,10 +27,9 @@ class BirdViewController: UIViewController {
         self.navigationItem.title = bird
         sightingsTF.text = "\(0)"
         dateLBL.text = "\(Calendar.current.component(.year , from: Date()))"
-        locLBL.text = "\(birdie.location.latitude, birdie.location.longitude)"
+        locLBL.text = "\(birdie.location.latitude , birdie.location.longitude)"
         birdPicIV.image = UIImage(named: "\(bird!).jpg")
         
-        let datePicker = Date()
         let formatter = DateFormatter()
         formatter.dateFormat = "dd-MM-yyyy HH:mm:ssss"
         let result = formatter.string(from: Date())
