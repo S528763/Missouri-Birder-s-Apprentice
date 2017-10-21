@@ -20,7 +20,7 @@ class BirdsTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        tableView.register(BirdTableViewCell.self, forCellReuseIdentifier: "bird_cell")
+        //tableView.register(BirdTableViewCell.self, forCellReuseIdentifier: "bird_cell")
     }
 
     override func didReceiveMemoryWarning() {
@@ -55,7 +55,6 @@ class BirdsTableViewController: UITableViewController {
         birdVC.bird = county.birds[indexPath.row].name
         self.navigationController?.pushViewController(birdVC, animated: true)
     }
-    
     
     /*
     // Override to support conditional editing of the table view.
@@ -99,7 +98,8 @@ class BirdsTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+
     }
-    */
+     */
 
 }

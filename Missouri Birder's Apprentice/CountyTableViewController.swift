@@ -18,7 +18,7 @@ class CountyTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         self.navigationItem.title = "Counties"
-        tableView.register(CountyTableViewCell.self, forCellReuseIdentifier: "county_cell")
+        //tableView.register(CountyTableViewCell.self, forCellReuseIdentifier: "county_cell")
     }
 
     override func viewWillAppear(_ animated:Bool){
@@ -51,10 +51,17 @@ class CountyTableViewController: UITableViewController {
         return cell
     }
     
+    /*
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let birdsFound:BirdsTableViewController = BirdsTableViewController()
         birdsFound.county = State.countyNum(indexPath.row)
         self.navigationController?.pushViewController(birdsFound, animated: true)
+    }
+     */
+ 
+    @objc @IBAction func displayAddNewCounty(sender:AnyObject?){
+        let newCountyVC:AddNewCountyViewController = AddNewCountyViewController()
+        self.present(newCountyVC, animated: true, completion: nil)
     }
 
     /*
@@ -92,14 +99,18 @@ class CountyTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        let birdsFound:BirdsTableViewController = segue.destination as! BirdsTableViewController
+        birdsFound.county = State.countyNum(tableView.indexPathForSelectedRow!.row)
+        //self.navigationController?.pushViewController(birdsFound, animated: true)
+        
     }
-    */
 
 }
