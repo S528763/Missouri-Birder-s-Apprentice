@@ -22,7 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1F111FF81F8D4479001820B7 /* Missouri Birder's Apprentice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Missouri Birder's Apprentice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F111FF81F8D4479001820B7 /* Missouri Birder's Apprentice Part II.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Missouri Birder's Apprentice Part II.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F111FFB1F8D4479001820B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F1120041F8D4479001820B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F1120071F8D4479001820B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -52,7 +52,7 @@
 		1F111FEF1F8D4479001820B7 = {
 			isa = PBXGroup;
 			children = (
-				1F111FFA1F8D4479001820B7 /* Missouri Birder's Apprentice */,
+				1F111FFA1F8D4479001820B7 /* Missouri Birder's Apprentice Part II */,
 				1F111FF91F8D4479001820B7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -60,12 +60,12 @@
 		1F111FF91F8D4479001820B7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1F111FF81F8D4479001820B7 /* Missouri Birder's Apprentice.app */,
+				1F111FF81F8D4479001820B7 /* Missouri Birder's Apprentice Part II.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1F111FFA1F8D4479001820B7 /* Missouri Birder's Apprentice */ = {
+		1F111FFA1F8D4479001820B7 /* Missouri Birder's Apprentice Part II */ = {
 			isa = PBXGroup;
 			children = (
 				1F111FFB1F8D4479001820B7 /* AppDelegate.swift */,
@@ -82,15 +82,15 @@
 				1F1120061F8D4479001820B7 /* LaunchScreen.storyboard */,
 				1F1120091F8D4479001820B7 /* Info.plist */,
 			);
-			path = "Missouri Birder's Apprentice";
+			path = "Missouri Birder's Apprentice Part II";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1F111FF71F8D4479001820B7 /* Missouri Birder's Apprentice */ = {
+		1F111FF71F8D4479001820B7 /* Missouri Birder's Apprentice Part II */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1F11200C1F8D4479001820B7 /* Build configuration list for PBXNativeTarget "Missouri Birder's Apprentice" */;
+			buildConfigurationList = 1F11200C1F8D4479001820B7 /* Build configuration list for PBXNativeTarget "Missouri Birder's Apprentice Part II" */;
 			buildPhases = (
 				1F111FF41F8D4479001820B7 /* Sources */,
 				1F111FF51F8D4479001820B7 /* Frameworks */,
@@ -100,9 +100,9 @@
 			);
 			dependencies = (
 			);
-			name = "Missouri Birder's Apprentice";
+			name = "Missouri Birder's Apprentice Part II";
 			productName = "Missouri Birder's Apprentice";
-			productReference = 1F111FF81F8D4479001820B7 /* Missouri Birder's Apprentice.app */;
+			productReference = 1F111FF81F8D4479001820B7 /* Missouri Birder's Apprentice Part II.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -121,7 +121,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1F111FF31F8D4479001820B7 /* Build configuration list for PBXProject "Missouri Birder's Apprentice" */;
+			buildConfigurationList = 1F111FF31F8D4479001820B7 /* Build configuration list for PBXProject "Missouri Birder's Apprentice Part II" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -134,7 +134,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1F111FF71F8D4479001820B7 /* Missouri Birder's Apprentice */,
+				1F111FF71F8D4479001820B7 /* Missouri Birder's Apprentice Part II */,
 			);
 		};
 /* End PBXProject section */
@@ -321,7 +321,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1F111FF31F8D4479001820B7 /* Build configuration list for PBXProject "Missouri Birder's Apprentice" */ = {
+		1F111FF31F8D4479001820B7 /* Build configuration list for PBXProject "Missouri Birder's Apprentice Part II" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1F11200A1F8D4479001820B7 /* Debug */,
@@ -330,7 +330,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1F11200C1F8D4479001820B7 /* Build configuration list for PBXNativeTarget "Missouri Birder's Apprentice" */ = {
+		1F11200C1F8D4479001820B7 /* Build configuration list for PBXNativeTarget "Missouri Birder's Apprentice Part II" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1F11200D1F8D4479001820B7 /* Debug */,
