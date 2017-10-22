@@ -22,6 +22,11 @@ class State {
         return counties[index]
     }
     
+    // adds a new county
+    static func addNewCounty(_ county:County) {
+        counties.append(county)
+    }
+    
 }
     
     

@@ -18,11 +18,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="county_cell" id="Ppo-YX-VoO">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="county_cell" id="Ppo-YX-VoO">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ppo-YX-VoO" id="2Qy-5o-eVX">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -35,7 +35,13 @@
                             <outlet property="delegate" destination="SbZ-7U-RNW" id="kgi-SN-iht"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Counties" id="OfO-yX-6FW"/>
+                    <navigationItem key="navigationItem" title="Counties" id="OfO-yX-6FW">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="lAy-cJ-FN5">
+                            <connections>
+                                <segue destination="3JW-WR-pqa" kind="presentation" identifier="new_county" id="XNV-64-f0b"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hn4-3R-ViG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -213,6 +219,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Done"/>
+                                <connections>
+                                    <segue destination="sUo-aV-O78" kind="unwind" unwindAction="addNewCountyWithSegue:" id="JrT-Xv-WBd"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="County Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WLT-La-Lx3">
                                 <rect key="frame" x="16" y="135" width="116" height="30"/>
@@ -225,8 +234,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="Ssa-Di-96e"/>
                     </view>
+                    <connections>
+                        <outlet property="countyNameTF" destination="Iha-LH-6wP" id="mBf-Fi-Qr1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YSu-jV-Wss" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="sUo-aV-O78" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-1676" y="523"/>
         </scene>
