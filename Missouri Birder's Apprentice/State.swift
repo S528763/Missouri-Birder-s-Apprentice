@@ -27,6 +27,19 @@ class State {
         counties.append(county)
     }
     
+    // adds a new bird
+    static func addNewBird(_ bird:Bird) {
+        let abc:AddNewCountyViewController = AddNewCountyViewController()
+        let i = counties.index(of: "\(abc.countyNameTF.text!)")
+        //(where: County(birds: AddNewCountyViewController().countyNameTF.text!))
+    }
+    
+    
+//    static func updateCounty(_ bird: Bird) {
+//        addNewCounty(County)
+//        
+//        
+//    }
 }
     
     

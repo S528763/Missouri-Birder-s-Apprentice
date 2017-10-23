@@ -70,6 +70,13 @@
                             <outlet property="delegate" destination="Oxk-zt-MHM" id="a9l-fZ-Wgb"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="dob-I5-7MZ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="KU9-Q4-IYq">
+                            <connections>
+                                <segue destination="0eb-UG-gCl" kind="presentation" identifier="new_bird" id="dM4-qB-dVS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oPf-rX-prS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -151,19 +158,32 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <segue destination="JcN-hI-Bf1" kind="unwind" unwindAction="addNewBirdWithSegue:" id="SrG-A8-iqx"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ORA-iu-5ML">
                                 <rect key="frame" x="250" y="343" width="43" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="doneWithSender:" destination="0eb-UG-gCl" eventType="touchUpInside" id="fz3-gz-EaQ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="1lm-gR-WyJ"/>
                     </view>
+                    <connections>
+                        <outlet property="birdLatinTF" destination="iya-8P-aDN" id="t68-Nq-T2K"/>
+                        <outlet property="birdNameTF" destination="xuV-Ce-a5c" id="6g4-gr-lR0"/>
+                        <outlet property="latitudeTF" destination="Kv5-ri-n2k" id="RKe-u2-Dod"/>
+                        <outlet property="longitudeTF" destination="5dc-sw-MmS" id="W4u-74-rYp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dWb-9D-pob" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="JcN-hI-Bf1" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-119" y="522"/>
         </scene>
@@ -213,6 +233,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <segue destination="sUo-aV-O78" kind="unwind" unwindAction="addNewCountyWithSegue:" id="by1-Ed-7py"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9IK-Kb-qWJ">
                                 <rect key="frame" x="244" y="206" width="43" height="34"/>
@@ -220,7 +243,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Done"/>
                                 <connections>
-                                    <segue destination="sUo-aV-O78" kind="unwind" unwindAction="addNewCountyWithSegue:" id="JrT-Xv-WBd"/>
+                                    <action selector="doneWithSender:" destination="3JW-WR-pqa" eventType="touchUpInside" id="V7W-2Y-CsQ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="County Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WLT-La-Lx3">

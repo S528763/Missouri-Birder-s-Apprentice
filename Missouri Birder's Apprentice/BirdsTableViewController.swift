@@ -10,11 +10,16 @@ import UIKit
 
 class BirdsTableViewController: UITableViewController {
 
-    var county:County!    
+    var county:County!
+    
+    @IBAction func addNewBird(segue:UIStoryboardSegue) {
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.navigationItem.title = county.name
+        self.navigationItem.title = county.name
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

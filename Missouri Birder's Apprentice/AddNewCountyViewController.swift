@@ -23,7 +23,11 @@ class AddNewCountyViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
+    @objc @IBAction func done(sender:UIButton){
+        let countyToAdd = County(name: countyNameTF.text!, birds: [Bird.init()])
+        State.addNewCounty(countyToAdd)
+        self.dismiss(animated: true, completion: nil)
+    }
     
     //MARK: - Navigation
     
@@ -31,8 +35,8 @@ class AddNewCountyViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //  Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        let countyToAdd = County(name: countyNameTF.text!, birds: [Bird.init()])
-        State.addNewCounty(countyToAdd)
+//        let countyToAdd = County(name: countyNameTF.text!, birds: [Bird.init()])
+//        State.addNewCounty(countyToAdd)
     }
     
     

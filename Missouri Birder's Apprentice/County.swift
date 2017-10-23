@@ -16,4 +16,8 @@ class County {
         self.name = name
         self.birds = birds
     }
+    
+    convenience init(birds: [Bird]) {
+        self.init(birds: birds)
+    }
 }
