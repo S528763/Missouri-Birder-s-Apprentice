@@ -28,11 +28,12 @@ class State {
     }
     
     // adds a new bird
-//    static func addNewBird(_ bird:Bird) {
-//        let abc:AddNewCountyViewController = AddNewCountyViewController()
-//        //abc.
-//        //(where: County(birds: AddNewCountyViewController().countyNameTF.text!))
-//    }
+    static func addNewBird(_ bird:Bird) {
+        let abc:BirdsTableViewController = BirdsTableViewController()
+        addNewCounty(County(name: abc.county.name, birds: [bird]))
+        
+        //(where: County(birds: AddNewCountyViewController().countyNameTF.text!))
+    }
     
     
 //    static func updateCounty(_ bird: Bird) {

@@ -16,6 +16,9 @@ class AddNewBirdViewController: UIViewController {
     @IBOutlet weak var latitudeTF: UITextField!
     @IBOutlet weak var longitudeTF: UITextField!
     
+//    let cTVC:AddNewCountyViewController = AddNewCountyViewController()
+//    let ab =
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,10 +31,11 @@ class AddNewBirdViewController: UIViewController {
     }
     
     @objc @IBAction func done(sender:UIButton){
-        let cTVC:AddNewCountyViewController = AddNewCountyViewController()
-        let birdToAdd = Bird(name: birdNameTF.text!, latinName: birdLatinTF.text!, dateFirstSighted: "\(Date())", numOfSightings: 1, description: "Its a Bird", location: CLLocationCoordinate2D(latitude: Double(latitudeTF.text!)!, longitude: Double(longitudeTF.text!)!))
-        let abc = County(name: "\(cTVC.countyNameTF.text!)", birds: [birdToAdd])
-        State.addNewCounty(abc)
+        
+        let birdToAdd = Bird(name: birdNameTF.text!, latinName: birdLatinTF.text!, dateFirstSighted: "", numOfSightings: 1, description: "Its a Bird", location: CLLocationCoordinate2D(latitude: Double(latitudeTF.text!)!, longitude: Double(longitudeTF.text!)!))
+//        let abc = County(name: "\(cTVC.countyNameTF.text!)", birds: [birdToAdd])
+//        State.addNewCounty(abc)
+        State.addNewBird(birdToAdd)
         self.dismiss(animated: true, completion: nil)
     }
     

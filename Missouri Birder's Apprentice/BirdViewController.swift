@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class BirdViewController: UIViewController {
 
@@ -26,7 +27,6 @@ class BirdViewController: UIViewController {
         // Do any additional setup after loading the view.
         self.navigationItem.title = bird
         sightingsTF.text = "\(0)"
-        dateLBL.text = "\(Calendar.current.component(.year , from: Date()))"
         locLBL.text = "\(birdie.location.latitude , birdie.location.longitude)"
         birdPicIV.image = UIImage(named: "\(bird!).jpg")
         
