@@ -28,8 +28,10 @@ class AddNewBirdViewController: UIViewController {
     }
     
     @objc @IBAction func done(sender:UIButton){
+        let cTVC:AddNewCountyViewController = AddNewCountyViewController()
         let birdToAdd = Bird(name: birdNameTF.text!, latinName: birdLatinTF.text!, dateFirstSighted: "\(Date())", numOfSightings: 1, description: "Its a Bird", location: CLLocationCoordinate2D(latitude: Double(latitudeTF.text!)!, longitude: Double(longitudeTF.text!)!))
-        //State.addNewCounty(State.countyNum(.indexPathForSelectedRow!.row))
+        let abc = County(name: "\(cTVC.countyNameTF.text!)", birds: [birdToAdd])
+        State.addNewCounty(abc)
         self.dismiss(animated: true, completion: nil)
     }
     

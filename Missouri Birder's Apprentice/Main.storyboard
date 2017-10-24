@@ -159,7 +159,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Cancel"/>
                                 <connections>
-                                    <segue destination="JcN-hI-Bf1" kind="unwind" unwindAction="addNewBirdWithSegue:" id="SrG-A8-iqx"/>
+                                    <segue destination="JcN-hI-Bf1" kind="unwind" unwindAction="cancelWithUnwindSegue:" id="pMh-OF-grT"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ORA-iu-5ML">
@@ -234,7 +234,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Cancel"/>
                                 <connections>
-                                    <segue destination="sUo-aV-O78" kind="unwind" unwindAction="addNewCountyWithSegue:" id="by1-Ed-7py"/>
+                                    <segue destination="sUo-aV-O78" kind="unwind" unwindAction="cancelWithUnwindSegue:" id="kjA-7I-MxW"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9IK-Kb-qWJ">

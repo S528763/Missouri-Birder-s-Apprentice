@@ -12,10 +12,6 @@ class BirdsTableViewController: UITableViewController {
 
     var county:County!
     
-    @IBAction func addNewBird(segue:UIStoryboardSegue) {
-        
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = county.name
@@ -106,5 +102,10 @@ class BirdsTableViewController: UITableViewController {
 
     }
      */
+    
+    @IBAction func cancel(unwindSegue: UIStoryboardSegue) {
+        
+    }
+    
 
 }

@@ -10,10 +10,6 @@ import UIKit
 
 class CountyTableViewController: UITableViewController {
     
-    @IBAction func addNewCounty(segue:UIStoryboardSegue) {
-        
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -117,6 +113,10 @@ class CountyTableViewController: UITableViewController {
             birdsFound.county = State.countyNum(tableView.indexPathForSelectedRow!.row)
         }
         //self.navigationController?.pushViewController(birdsFound, animated: true)
+        
+    }
+    
+    @IBAction func cancel(unwindSegue: UIStoryboardSegue) {
         
     }
     
